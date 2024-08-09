@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeraMauiApp.Pages.LibrosPage"
              Title="Libros">
-    <ScrollView>
+    <ScrollView BackgroundColor="{StaticResource BackgroundPage}">
     <VerticalStackLayout>
         <Label 
             Text="Lista de libros"
@@ -15,6 +15,7 @@
                 FontSize="Large"
                 Clicked="btnVolver_Clicked"
                 VerticalOptions="Center" 
+                Style="{StaticResource EstiloBoton}"
                 HorizontalOptions="Center"/>
 
             <CollectionView x:Name="CollectionLibros"

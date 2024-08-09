@@ -21,6 +21,7 @@
 
     <Style TargetType="BoxView">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
+        <Setter Property="Margin" Value="4"/>
     </Style>
 
     <Style TargetType="Button">
@@ -47,6 +48,19 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+    </Style>
+
+    <Style x:Key="EstiloBoton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#2bed64"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="FontSize" Value="Title"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+
+    <Style x:Key="EstiloGrid" TargetType="Grid">
+        <Setter Property="Margin" Value="1"/>
     </Style>
 
     <Style TargetType="CheckBox">

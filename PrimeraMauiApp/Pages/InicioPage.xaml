@@ -3,17 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeraMauiApp.Pages.InicioPage"
              Title="InicioPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="{StaticResource BackgroundPage}}">
         <Label 
             Text="App Libros"
             FontSize="Large"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Button Text="Libros"
-                FontSize="Large"
-                Clicked="Button_Clicked"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"/>
+        <HorizontalStackLayout>
+            <Button Text="Libros"
+                    Style="{StaticResource EstiloBoton}"
+                    Clicked="Button_Clicked"/>
+
+            <Button Text="Controles comunes"
+                    x:Name="btnControlesComunes"
+                    Style="{StaticResource EstiloBoton}"
+                    Clicked="btnControlesComunes_Clicked"/>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

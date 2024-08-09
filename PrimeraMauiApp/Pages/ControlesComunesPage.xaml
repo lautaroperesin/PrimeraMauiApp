@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeraMauiApp.Pages.ControlesComunesPage"
+             Title="ControlesComunesPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*, 3*, *" RowDefinitions="*,*,*,*,*,*" BackgroundColor="Crimson" Style="{StaticResource EstiloGrid}">
+                <Frame Grid.ColumnSpan="3" BackgroundColor="DarkKhaki">
+                    <Label Text="Controles comunes .NET MAUI" Grid.ColumnSpan="3" FontSize="Large"/>
+                </Frame>
+                
+                <Label Text="Label" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Permite mostrar texto en pantalla" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Lista de libros" Grid.Row="1" Grid.Column="2"/>
+
+                <Line Grid.ColumnSpan="3" Grid.Row="5" BackgroundColor="DarkGray"></Line>
+                
+                <Label Text="Button" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Permite crear botones" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="Guardar" Grid.Row="2" Grid.Column="2" WidthRequest="100"/>
+
+                <Label Text="BoxView" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Permite crear cuadros de color" Grid.Row="3" Grid.Column="1"/>
+                <BoxView BackgroundColor="Beige" Grid.Row="3" Grid.Column="2" WidthRequest="100" HeightRequest="40"/>
+
+                <Label Text="DatePicker" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="Permite elegir una fecha desplegando un calendario" Grid.Row="4" Grid.Column="1"/>
+                <DatePicker BackgroundColor="CadetBlue" Grid.Row="4" Grid.Column="2" WidthRequest="100" HeightRequest="40"/>
+
+                <Label Text="TimePicker" Grid.Row="5" Grid.Column="0"/>
+                <Label Text="Permite elegir un horario desplegando una lista de horas" Grid.Row="5" Grid.Column="1"/>
+                <TimePicker BackgroundColor="CadetBlue" Grid.Row="5" Grid.Column="2" WidthRequest="225" HeightRequest="40"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

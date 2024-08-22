@@ -5,17 +5,15 @@
              Title="ControlesComunesPage">
     <ScrollView>
         <VerticalStackLayout>
-            <Grid ColumnDefinitions="*, 3*, *" RowDefinitions="*,*,*,*,*,*" BackgroundColor="Crimson" Style="{StaticResource EstiloGrid}">
+            <Grid ColumnDefinitions="*, 3*, *" RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*" BackgroundColor="Crimson" Style="{StaticResource EstiloGrid}">
                 <Frame Grid.ColumnSpan="3" BackgroundColor="DarkKhaki">
                     <Label Text="Controles comunes .NET MAUI" Grid.ColumnSpan="3" FontSize="Large"/>
                 </Frame>
-                
+
                 <Label Text="Label" Grid.Row="1" Grid.Column="0"/>
                 <Label Text="Permite mostrar texto en pantalla" Grid.Row="1" Grid.Column="1"/>
                 <Label Text="Lista de libros" Grid.Row="1" Grid.Column="2"/>
 
-                <Line Grid.ColumnSpan="3" Grid.Row="5" BackgroundColor="DarkGray"></Line>
-                
                 <Label Text="Button" Grid.Row="2" Grid.Column="0"/>
                 <Label Text="Permite crear botones" Grid.Row="2" Grid.Column="1"/>
                 <Button Text="Guardar" Grid.Row="2" Grid.Column="2" WidthRequest="100"/>
@@ -31,7 +29,36 @@
                 <Label Text="TimePicker" Grid.Row="5" Grid.Column="0"/>
                 <Label Text="Permite elegir un horario desplegando una lista de horas" Grid.Row="5" Grid.Column="1"/>
                 <TimePicker BackgroundColor="CadetBlue" Grid.Row="5" Grid.Column="2" WidthRequest="225" HeightRequest="40"/>
+
+                <Label Text="Entry" Grid.Row="6" Grid.Column="0"/>
+                <Label Text="Campo de entrada de texto" Grid.Row="6" Grid.Column="1"/>
+                <Entry Placeholder="Apellido y nombre" Grid.Row="6" Grid.Column="2" HeightRequest="40" BackgroundColor="AliceBlue"/>
+
+                <Label Text="Switch" Grid.Row="7" Grid.Column="0"/>
+                <Label Text="Permite alternar entre dos estados" Grid.Row="7" Grid.Column="1"/>
+                <Switch Grid.Row="7" Grid.Column="2" HeightRequest="40" BackgroundColor="DodgerBlue" Margin="5" HorizontalOptions="Center"/>
+
+                <Label Text="Slider" Grid.Row="8" Grid.Column="0"/>
+                <Label Text="" Grid.Row="8" Grid.Column="1"/>
+                <Slider Grid.Row="8" Grid.Column="2"/>
+
+                <Label Text="Editor" Grid.Row="9" Grid.Column="0"/>
+                <Label Text="Campo de entrada de texto multilínea" Grid.Row="9" Grid.Column="1"/>
+                <Editor Placeholder="Ingrese su dirección" Grid.Row="9" Grid.Column="2" BackgroundColor="Beige"/>
+
+                <Label Text="ListView" Grid.Row="10" Grid.Column="0"/>
+                <Label Text="Muestra una lista desplazable de elementos con plantillas de celdas" Grid.Row="10" Grid.Column="1"/>
+                <ListView  Grid.Row="10" Grid.Column="2" ItemsSource="{Binding Frutas}" BackgroundColor="GhostWhite">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
+
+
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
